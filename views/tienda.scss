@@ -1,3 +1,11 @@
+$azul: #496eb5; 
+$naranja: #ec6c24;
+$crema: #edd29b;
+$blanco: #ffffff;
+$negro: #231f20;
+
+
+
 body {
     font-size: 18px;
     line-height: 1.4;
@@ -22,10 +30,10 @@ body {
     transform: translatez(0);
     
     &__image, &__caption {
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
     
     &__image {
@@ -40,10 +48,11 @@ body {
     }
     
     &__caption {
+     background: (0,0,0,0.3);
       height: auto;
       z-index: 20;
       text-align: center;
-      color: #fff;
+      color: $naranja;
       position: relative;
       top: 50%;
       transform: translateY(-50%);
