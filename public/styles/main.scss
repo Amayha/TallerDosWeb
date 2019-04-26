@@ -1,0 +1,521 @@
+$azul: #496eb5; 
+$naranja: #ec6c24;
+$crema: #edd29b;
+$blanco: #ffffff;
+$negro: #231f20;
+
+
+body{
+  margin: 1px;
+  height: 100%;
+  
+}
+html{
+  margin: 2px;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app{
+
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+  .nav{
+    display: block;
+    font-size: 20px;
+    color: $negro;
+    background: $crema;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+
+
+    .logo{
+      width: 90px;
+    }
+
+    &__item{
+      text-decoration: none;   
+      margin: 5%;
+      color: $negro;
+    }
+
+    &__boton{
+      font-size: 22px;
+      text-decoration: none;
+      color: $blanco;
+      background-color: $azul;  
+      height:50%;
+      flex-basis: 10%;
+      border-radius: 6px;
+      border: none;
+      padding: 6px 12px; 
+    }
+
+
+  }
+
+  .body{
+
+    &__top{
+      //background: grey;
+      display: flex;
+      flex-direction: column;
+     
+      .top__down{
+        display: flex;
+        flex-direction: row;
+        align-content: space-around;
+      }
+
+      .down__uno{
+        margin-left: 10%;
+        width: 90%;
+        align-items: flex-end;
+        justify-content: flex-start;
+      }
+
+      .down__dos{
+        flex-basis: 40%;
+        align-self: flex-end;
+      }
+
+
+      .top__down__estrella{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-right: 10%;
+      }
+
+      .top__down__imagen{
+        height: 200px;
+        display: flex;
+        
+      }
+
+      .up__base{
+        margin: 0 0 0 10%;
+      }
+
+      .up__parrafo{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        
+      }
+
+      .up__uno{
+        color: $azul;
+        font-size: 48px;
+        margin-left: 15%;
+        //margin: 10px 30px 10px 30px;
+      }
+
+      .up__uno span {
+        color: $naranja;
+        font-size: 48px;
+      }
+
+      .up__dos{
+        font-size: 30px;
+        margin-right: 10%;
+        //margin: 10px 300px 10px 300px;
+      }
+
+      
+    }
+
+    .contar{
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      background: $naranja;
+      padding: 2%;
+      
+      
+      &__boton__sec{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      &__boton{
+        margin: 10px;
+        color: $naranja;
+        height:50px;
+        flex-basis: 10%;
+        border-radius: 6px;
+        border: none;
+        padding: 6px 12px; 
+      }
+
+      &__texto{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 20px;
+        color: $blanco;
+      }
+      
+      }
+      .contador {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+      
+          &__polig{
+            margin: 0 5px;
+              border: 1px solid $blanco;
+              height: 100px;
+              width: 100px;    
+              font-size: 36px;
+              color: $blanco;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+          } 
+        
+      }
+      .interac{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-content: center;
+      }
+
+
+  }//fin de body
+
+}
+
+
+.top{
+    display: flex;
+    border: 1px solid gray;
+    height: 500px;
+}
+
+
+
+  .lista{
+    background: $naranja;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__titulo{
+      color: $blanco;
+      font-size:25px ;
+    }
+  }
+
+  .lineas{
+    background: $naranja;
+  }
+  .columnas{  
+
+    display: flex;
+    height: 300px;
+    flex-basis: 90%;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+
+    &__col{
+      background-color: $azul;
+      margin: 2%;
+      width: 250px;
+      flex-basis: 250px;
+    }
+}
+
+
+
+.gato{
+  font-family: 'Poppins', sans-serif;
+    &__imagen{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 150px;
+    }
+
+    &__info{
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+
+  .gato__desc{
+    justify-content: center;
+    align-items: center;
+    color: $blanco;
+
+    }
+   .modalBtn{
+    text-decoration: none;
+    color: $blanco;
+    background-color: $naranja;  
+    height:50%;
+    flex-basis: 10%;
+    border-radius: 6px;
+    border: none;
+    padding: 6px 12px; 
+   }
+   
+}
+
+.beneficios__titulo{
+  margin: 30px 0;
+color: $naranja;
+}
+
+.beneficios__info{
+  margin:  0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.beneficios__texto{
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+
+.modal{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+
+  display: none;
+  //display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.3);
+
+  &__contenido{
+    background-color:white;
+    margin: 20% auto;
+    width: 50%;
+    box-shadow: 0 5px 8px 0 rgba($color: #000000, $alpha: 0.5);
+    animation-name: modalPop;
+    animation-duration: 1s;
+  }
+
+   &__cuerpo{
+      padding: 10px 20px;
+   }
+
+
+  &__cerrar{
+    color: $negro;
+    float: right;
+    font-size: 30px;
+  }
+
+  .gato__imagenM{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+  }
+
+  .modal__desc{
+    font-size: 18px;
+  }
+ 
+  .modal__info{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  }
+
+.desc__titulo{
+  font-size: 30px;
+  color: $naranja;
+}
+
+}
+
+.modal__boton{
+  margin: 5px 30%;
+  text-decoration: none;
+  color: $blanco;
+  background-color: $azul;  
+  height:30px;
+  flex-basis: 30%;
+  border-radius: 6px;
+  border: none;
+  padding: 6px 12px; 
+}
+
+.modal__cerrar:hover{
+   color: black;
+   cursor: pointer;
+
+}
+
+.modal__cerrar:focus{
+   color: black;
+   cursor: pointer;
+
+}
+
+
+@keyframes modalPop{
+   from{opacity: 0;}
+   to{opacity: 1;} 
+}
+
+
+
+
+
+.pie{
+height: 180px;
+background-color: $crema;
+
+}
+.search-text{
+  height: 100px;
+  padding-bottom:30px;
+}
+ 
+.search-text .input-search{
+ height:45px;
+ width:20%;
+ padding-left:20px;
+color: $azul;
+} 
+
+.search-text .btn-search{
+   background:$naranja;
+   border:none;
+ color:#FFF;
+ height: 45px;
+   width: 80px;
+}
+
+.search-text h4{
+   color:$azul;
+   font-weight: 700;
+}
+
+footer{
+ background-color: $crema;
+  //padding: 60px 0px;
+}
+
+.container1{
+  margin: 5px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+footer ul{
+   list-style:none;
+   margin:0 auto;
+   display:inline-block;
+   padding-top:50px;
+}
+
+footer ul li{
+   float:left;
+}
+
+footer ul li a{
+ color:#b1aca1;
+   padding:20px;
+}
+
+footer ul li a:hover{
+ color:#7dabdb;
+ text-decoration:none;
+}
+
+.footer-top{
+ padding-bottom:50px;
+}
+
+.footer-top .fa{
+   font-size:18px;
+   color: #FFF;
+   padding-right:10px;
+}
+
+.footer-top a{
+   color:#FFF;
+   background: $azul; 
+   padding: 10px;
+}
+
+.footer-top .col-lg-2:hover .fa , .footer-top .col-lg-2:hover a{
+  color:#7dabdb;
+ text-decoration:none;
+}
+
+.copyright{
+  background-color:#f0f0f0;
+}
+
+.copyright p{
+ font-size:12px;
+ padding:15px 0 10px 0;
+}
+
+
+
+
+
+.dropdown {
+  display: none;
+  position: relative;
+  //display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  //display: block;
+}
+
+@media (max-width: 500px){
+
+  .nav{
+    display: none;
+  }
+  .dropdown{
+    display: block;
+  }
+
+  .modal__contenido{
+    margin: 5px auto;
+  }
+}
