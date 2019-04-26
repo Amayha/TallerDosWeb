@@ -10,7 +10,7 @@
 
 
     {
-        "_id": 1,
+        "_id": 2,
         "nombre": "Princesa",
         "precio": "1000",
         "categoria": ["hembra", "perro", "adulto"],
@@ -18,7 +18,7 @@
    
        },
 {
-     "_id": 1,
+     "_id": 3,
      "nombre": "Marie",
      "precio": "1000",
      "categoria": ["hembra", "perro", "cachorro"],
@@ -27,101 +27,150 @@
     },
 
     {
-        "_id": 1,
-        "nombre": "Tomas",
+        "_id": 4,
+        "nombre": "Marcelo",
         "precio": "1000",
-        "categoria": ["macho", "perro", "adulto"],
-        "imagen": "imagen.jpg"
+        "categoria": ["macho", "perro", "cachorro"],
+        "imagen": "marcelo.png"
    
        },
 
        {
-        "_id": 1,
-        "nombre": "Tomas",
+        "_id": 5,
+        "nombre": "kira",
         "precio": "1000",
         "categoria": ["macho", "perro", "adulto"],
-        "imagen": "imagen.jpg"
+        "imagen": "kira.png"
    
        },
 
        {
-        "_id": 1,
-        "nombre": "Tomas",
+        "_id": 6,
+        "nombre": "Simon",
         "precio": "1000",
         "categoria": ["macho", "perro", "adulto"],
-        "imagen": "imagen.jpg"
+        "imagen": "simon.png"
    
        },
 
        {
-        "_id": 1,
-        "nombre": "Tomas",
+        "_id": 7,
+        "nombre": "Lucas",
         "precio": "1000",
-        "categoria": ["macho", "perro", "adulto"],
-        "imagen": "imagen.jpg"
+        "categoria": ["macho", "perro", "cachorro"],
+        "imagen": "lucas.png"
    
        },
 
        {
-        "_id": 1,
-        "nombre": "Tomas",
+        "_id": 8,
+        "nombre": "Mateo",
         "precio": "1000",
         "categoria": ["macho", "perro", "adulto"],
-        "imagen": "imagen.jpg"
+        "imagen": "mateo.png"
    
        },
 
        {
-        "_id": 1,
-        "nombre": "Tomas",
+        "_id": 9,
+        "nombre": "Marujita",
         "precio": "1000",
-        "categoria": ["macho", "perro", "adulto"],
-        "imagen": "imagen.jpg"
+        "categoria": ["hembra", "perro", "adulto"],
+        "imagen": "marujita.png"
    
        },
 
        {
-        "_id": 1,
-        "nombre": "Tomas",
+        "_id": 10,
+        "nombre": "Hercules",
         "precio": "1000",
-        "categoria": ["macho", "perro", "adulto"],
-        "imagen": "imagen.jpg"
+        "categoria": ["macho", "perro", "cachorro"],
+        "imagen": "hercules.png"
    
        },
 
        {
-        "_id": 1,
-        "nombre": "Tomas",
+        "_id": 11,
+        "nombre": "Lunita",
         "precio": "1000",
-        "categoria": ["macho", "perro", "adulto"],
-        "imagen": "imagen.jpg"
+        "categoria": ["hembra", "perro", "cahcorro"],
+        "imagen": "lunita.png"
    
        },
 
        {
-        "_id": 1,
-        "nombre": "Tomas",
+        "_id": 12,
+        "nombre": "Aquiles",
         "precio": "1000",
-        "categoria": ["macho", "perro", "adulto"],
-        "imagen": "imagen.jpg"
+        "categoria": ["macho", "perro", "cachorro"],
+        "imagen": "aquiles.png"
    
        },
 
        {
-        "_id": 1,
-        "nombre": "Tomas",
+        "_id": 13,
+        "nombre": "Manchas",
         "precio": "1000",
         "categoria": ["macho", "perro", "adulto"],
-        "imagen": "imagen.jpg"
+        "imagen": "manchas.png"
    
        },
 
        {
-        "_id": 1,
-        "nombre": "Tomas",
+        "_id": 14,
+        "nombre": "Pelusa",
         "precio": "1000",
-        "categoria": ["macho", "perro", "adulto"],
-        "imagen": "imagen.jpg"
+        "categoria": ["hembra", "gato", "adulto"],
+        "imagen": "pelusa.png"
+   
+       },
+
+       {
+        "_id": 15,
+        "nombre": "Felix",
+        "precio": "1000",
+        "categoria": ["macho", "gato", "adulto"],
+        "imagen": "felix.png"
+   
+       },
+       {
+        "_id": 16,
+        "nombre": "Tom",
+        "precio": "1000",
+        "categoria": ["macho", "gato", "adulto"],
+        "imagen": "tom.png"
+   
+       },
+       {
+        "_id": 17,
+        "nombre": "Doraemon",
+        "precio": "1000",
+        "categoria": ["hembra", "gato", "cachorro"],
+        "imagen": "doraemon.png"
+   
+       },
+       {
+        "_id": 18,
+        "nombre": "Tiger",
+        "precio": "1000",
+        "categoria": ["macho", "gato", "adulto"],
+        "imagen": "tiger.png"
+   
+       },
+       {
+        "_id": 19,
+        "nombre": "Snow",
+        "precio": "1000",
+        "categoria": ["macho", "gato", "adulto"],
+        "imagen": "snow.png"
+   
+       },
+       {
+        "_id": 20,
+        "nombre": "Anubis",
+        "precio": "1000",
+        "categoria": ["hembra", "gato", "adulto"],
+        "imagen": "anubis.png"
    
        }
 
