@@ -1,0 +1,128 @@
+[
+    {
+     "_id": 1,
+     "nombre": "Tomas",
+     "precio": "1000",
+     "categoria": ["macho", "perro", "adulto"],
+     "imagen": "tomas.png"
+
+    },
+
+
+    {
+        "_id": 1,
+        "nombre": "Princesa",
+        "precio": "1000",
+        "categoria": ["hembra", "perro", "adulto"],
+        "imagen": "princesa.png"
+   
+       },
+{
+     "_id": 1,
+     "nombre": "Marie",
+     "precio": "1000",
+     "categoria": ["hembra", "perro", "cachorro"],
+     "imagen": "marie.png"
+
+    },
+
+    {
+        "_id": 1,
+        "nombre": "Tomas",
+        "precio": "1000",
+        "categoria": ["macho", "perro", "adulto"],
+        "imagen": "imagen.jpg"
+   
+       },
+
+       {
+        "_id": 1,
+        "nombre": "Tomas",
+        "precio": "1000",
+        "categoria": ["macho", "perro", "adulto"],
+        "imagen": "imagen.jpg"
+   
+       },
+
+       {
+        "_id": 1,
+        "nombre": "Tomas",
+        "precio": "1000",
+        "categoria": ["macho", "perro", "adulto"],
+        "imagen": "imagen.jpg"
+   
+       },
+
+       {
+        "_id": 1,
+        "nombre": "Tomas",
+        "precio": "1000",
+        "categoria": ["macho", "perro", "adulto"],
+        "imagen": "imagen.jpg"
+   
+       },
+
+       {
+        "_id": 1,
+        "nombre": "Tomas",
+        "precio": "1000",
+        "categoria": ["macho", "perro", "adulto"],
+        "imagen": "imagen.jpg"
+   
+       },
+
+       {
+        "_id": 1,
+        "nombre": "Tomas",
+        "precio": "1000",
+        "categoria": ["macho", "perro", "adulto"],
+        "imagen": "imagen.jpg"
+   
+       },
+
+       {
+        "_id": 1,
+        "nombre": "Tomas",
+        "precio": "1000",
+        "categoria": ["macho", "perro", "adulto"],
+        "imagen": "imagen.jpg"
+   
+       },
+
+       {
+        "_id": 1,
+        "nombre": "Tomas",
+        "precio": "1000",
+        "categoria": ["macho", "perro", "adulto"],
+        "imagen": "imagen.jpg"
+   
+       },
+
+       {
+        "_id": 1,
+        "nombre": "Tomas",
+        "precio": "1000",
+        "categoria": ["macho", "perro", "adulto"],
+        "imagen": "imagen.jpg"
+   
+       },
+
+       {
+        "_id": 1,
+        "nombre": "Tomas",
+        "precio": "1000",
+        "categoria": ["macho", "perro", "adulto"],
+        "imagen": "imagen.jpg"
+   
+       },
+
+       {
+        "_id": 1,
+        "nombre": "Tomas",
+        "precio": "1000",
+        "categoria": ["macho", "perro", "adulto"],
+        "imagen": "imagen.jpg"
+   
+       }
+
+]
