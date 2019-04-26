@@ -15,6 +15,31 @@ body {
     box-sizing: border-box;
   }
   
+
+  .nav{
+    display: block;
+    font-size: 20px;
+    color: $negro;
+    background: $crema;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+
+
+    .logo{
+      width: 90px;
+    }
+
+    &__item{
+      text-decoration: none;   
+      margin: 5%;
+      color: $negro;
+    }
+
+  }
+
   .outer-container {
     width: 100%;
     min-height: 1400px;
