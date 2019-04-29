@@ -1,6 +1,5 @@
 [
     {
-     "_id": 1,
      "nombre": "Tomas",
      "precio": "1000",
      "categoria": ["macho", "perro", "adulto"],
@@ -10,7 +9,6 @@
 
 
     {
-        "_id": 2,
         "nombre": "Princesa",
         "precio": "1000",
         "categoria": ["hembra", "perro", "adulto"],
@@ -18,7 +16,6 @@
    
        },
 {
-     "_id": 3,
      "nombre": "Marie",
      "precio": "1000",
      "categoria": ["hembra", "perro", "cachorro"],
@@ -27,7 +24,6 @@
     },
 
     {
-        "_id": 4,
         "nombre": "Marcelo",
         "precio": "1000",
         "categoria": ["macho", "perro", "cachorro"],
@@ -36,7 +32,6 @@
        },
 
        {
-        "_id": 5,
         "nombre": "kira",
         "precio": "1000",
         "categoria": ["macho", "perro", "adulto"],
@@ -45,7 +40,6 @@
        },
 
        {
-        "_id": 6,
         "nombre": "Simon",
         "precio": "1000",
         "categoria": ["macho", "perro", "adulto"],
@@ -54,7 +48,6 @@
        },
 
        {
-        "_id": 7,
         "nombre": "Lucas",
         "precio": "1000",
         "categoria": ["macho", "perro", "cachorro"],
@@ -63,7 +56,6 @@
        },
 
        {
-        "_id": 8,
         "nombre": "Mateo",
         "precio": "1000",
         "categoria": ["macho", "perro", "adulto"],
@@ -72,7 +64,6 @@
        },
 
        {
-        "_id": 9,
         "nombre": "Marujita",
         "precio": "1000",
         "categoria": ["hembra", "perro", "adulto"],
@@ -81,7 +72,6 @@
        },
 
        {
-        "_id": 10,
         "nombre": "Hercules",
         "precio": "1000",
         "categoria": ["macho", "perro", "cachorro"],
@@ -90,7 +80,6 @@
        },
 
        {
-        "_id": 11,
         "nombre": "Lunita",
         "precio": "1000",
         "categoria": ["hembra", "perro", "cahcorro"],
@@ -99,7 +88,6 @@
        },
 
        {
-        "_id": 12,
         "nombre": "Aquiles",
         "precio": "1000",
         "categoria": ["macho", "perro", "cachorro"],
@@ -108,7 +96,6 @@
        },
 
        {
-        "_id": 13,
         "nombre": "Manchas",
         "precio": "1000",
         "categoria": ["macho", "perro", "adulto"],
@@ -117,7 +104,6 @@
        },
 
        {
-        "_id": 14,
         "nombre": "Pelusa",
         "precio": "1000",
         "categoria": ["hembra", "gato", "adulto"],
@@ -126,7 +112,6 @@
        },
 
        {
-        "_id": 15,
         "nombre": "Felix",
         "precio": "1000",
         "categoria": ["macho", "gato", "adulto"],
@@ -134,15 +119,14 @@
    
        },
        {
-        "_id": 16,
         "nombre": "Tom",
         "precio": "1000",
         "categoria": ["macho", "gato", "adulto"],
         "imagen": "tom.png"
    
        },
+
        {
-        "_id": 17,
         "nombre": "Doraemon",
         "precio": "1000",
         "categoria": ["hembra", "gato", "cachorro"],
@@ -150,7 +134,6 @@
    
        },
        {
-        "_id": 18,
         "nombre": "Tiger",
         "precio": "1000",
         "categoria": ["macho", "gato", "adulto"],
@@ -158,7 +141,6 @@
    
        },
        {
-        "_id": 19,
         "nombre": "Snow",
         "precio": "1000",
         "categoria": ["macho", "gato", "adulto"],
@@ -166,7 +148,6 @@
    
        },
        {
-        "_id": 20,
         "nombre": "Anubis",
         "precio": "1000",
         "categoria": ["hembra", "gato", "adulto"],
