@@ -15,7 +15,7 @@
         "imagen": "princesa.png"
    
        },
-{
+    {
      "nombre": "Marie",
      "precio": "1000",
      "categoria": ["hembra", "perro", "cachorro"],
