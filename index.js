@@ -24,7 +24,7 @@ client.connect(function(err) {
         assert.equal(null, err);
         console.log('encontramos los docs');
         docs.forEach(function(prod){
-            console.log(prod.precio);
+            //console.log(prod.precio);
         })
 
     });
