@@ -42,7 +42,7 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 app.get('/', function (request, response) {
-    response.render('tienda');
+    response.render('forma');
 });
 
 console.log("Servidor iniciado...");
