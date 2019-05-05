@@ -11,28 +11,17 @@ const dbName = 'peluditos';
 // Create a new MongoClient
 const client = new MongoClient(url);
 
+var db = null;
+
 // Use connect method to connect to the Server
-client.connect(function(err) {
+client.connect(function (err) {
     assert.equal(null, err);
     console.log("Connected successfully to server");
-  
-    const db = client.db(dbName);
 
-    const productos = db.collection('productos');
+    db = client.db(dbName);
 
-    productos.find({}, {sort: ['precio']}).toArray(function(err, docs){
-        assert.equal(null, err);
-        console.log('encontramos los docs');
-        docs.forEach(function(prod){
-            console.log(prod.precio);
-        })
-
-    });
-  
-    client.close();
-  });
-
-
+    //client.close();
+});
 
 var app = express();
 
@@ -41,8 +30,35 @@ app.use(express.static('public'));
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
+
 app.get('/', function (request, response) {
-    response.render('tienda');
+    var contexto = {
+        titulo: 'Página principal',
+    };
+    response.render('home', contexto);
+});
+
+
+app.get('/tienda/:categoria?', function (request, response) {
+
+var query = {};
+if (request.params.categoria){
+    query.categoria = request.params.categoria;
+}
+
+    var collection = db.collection('productos');
+
+    // Find some documents
+    collection.find(query).toArray(function (err, docs) {
+        assert.equal(err, null);
+
+        var contexto = {
+            productos: docs,
+            categoria: request.params.categoria
+        };
+        response.render('tienda', contexto);
+    });
+
 });
 
 console.log("Servidor iniciado...");
