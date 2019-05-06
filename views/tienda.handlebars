@@ -82,12 +82,14 @@
     </div>
 
     <div>
-        <ul>
+        <ul class="lista">
             {{#each productos}}
-            <li>
-                <h3>{{nombre}}</h3>
-                <p>{{precio}}</p>
-                <img src="../fotos/{{imagen}}" alt="" width="500px">
+            <li class="lista_item">
+                <img src="../fotos/{{imagen}}" alt="" width="400px" class="lista_imagen">
+                <h3 class="lista_nombre">{{nombre}}</h3>
+                <p class="lista_precio">{{precio}}</p>
+                <p class="lista_categoria">{{categoria}}</p>
+                <button class="lista_boton light">Adoptar</button>
             </li>
             {{/each}}
         </ul>

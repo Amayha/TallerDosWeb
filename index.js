@@ -38,6 +38,13 @@ app.get('/', function (request, response) {
     response.render('home', contexto);
 });
 
+app.get('/forma', function (request, response) {
+    var contexto = {
+        titulo: 'Forma',
+    };
+    response.render('forma', contexto);
+});
+
 
 app.get('/tienda/:categoria?', function (request, response) {
 

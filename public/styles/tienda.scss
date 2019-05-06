@@ -121,12 +121,11 @@ body {
   }
 
   .filtros{
-    background-color: coral;
     margin: 1%;
     padding: 30px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   @mixin clearfix {
@@ -278,3 +277,70 @@ body {
       }
     }
   }
+
+  .lista{
+    background-color: coral;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &_item{
+      padding: 10px;
+   }
+
+    &_imagen{
+      background-color: lightgray;
+    }
+  }
+
+  .lista_boton{
+    padding: 0.8em 0em;
+    width:200px;
+    background: #ff6e00;
+    border-radius:15px;
+    border:0;
+    color:#fff;
+    font-size:16px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight:bold;
+    cursor:pointer;
+    margin:1em 2em;
+    text-transform:uppercase;
+}
+.light{
+background: -moz-linear-gradient(-45deg,  #ff6e00 0%, #ff6e00 40%, #ffffff 50%, #ff6e00 60%, #ff6e00 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ff6e00), color-stop(40%,#ff6e00), color-stop(50%,#ffffff), color-stop(60%,#ff6e00), color-stop(100%,#ff6e00));
+background: -webkit-linear-gradient(-45deg,  #ff6e00 0%,#ff6e00 40%,#ffffff 50%,#ff6e00 60%,#ff6e00 100%);
+background: -o-linear-gradient(-45deg,  #ff6e00 0%,#ff6e00 40%,#ffffff 50%,#ff6e00 60%,#ff6e00 100%);
+background: -ms-linear-gradient(-45deg,  #ff6e00 0%,#ff6e00 40%,#ffffff 50%,#ff6e00 60%,#ff6e00 100%);
+background: linear-gradient(135deg,  #ff6e00 0%,#ff6e00 40%,#ffffff 50%,#ff6e00 60%,#ff6e00 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6e00', endColorstr='#ff6e00',GradientType=1 );
+background-repeat: no-repeat;  
+background-position:0px;
+background-size:300%;  
+}
+
+.light:hover{
+animation:light 1s;
+-webkit-animation:light 1s;
+
+}
+
+@keyframes light {
+0% {
+    background-position:-600px; 
+}
+100% { 
+    background-position:0px; 
+}
+}
+    
+@-webkit-keyframes light {
+0% {
+    background-position:-600px; 
+}
+100% { 
+    background-position:0px; 
+}
+}
