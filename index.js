@@ -61,5 +61,8 @@ if (request.params.categoria){
 
 });
 
+
+
+
 console.log("Servidor iniciado...");
 app.listen(3000);

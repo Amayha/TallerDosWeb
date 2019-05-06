@@ -5,6 +5,9 @@
 
     <title>Tienda Peluditos</title>
     <link rel="stylesheet" href="/styles/tienda.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
+  
 </head>
 
 <body>
@@ -36,25 +39,63 @@
         </div>
     </div>
 
-    <div class="filtros">
 
+    <div class="filtros">
+        <div class="switch">
+            <input name="radio" type="radio" value="optionone" id="optionone" checked>
+            <label for="optionone">Hembra</label>
+
+            <input name="radio" type="radio" value="optiontwo" id="optiontwo">
+            <label id="selector1" for="optiontwo" class="right">Macho</label>
+
+            <span aria-hidden="true"></span>
+
+          {{!-- {{     {{#if_eq categoria 'macho'}}
+                <script>
+                    var indicator = $(selector1).parent('.switch').find('span');
+                    $(indicator).addClass('right');
+
+                </script>
+            {{/if_eq}}    }} --}}
+        </div>
+
+        <div class="switch2">
+            <input name="radio" type="radio" value="optionone" id="optionone" checked>
+            <label for="optionone">Gato</label>
+
+            <input name="radio" type="radio" value="optiontwo" id="optiontwo">
+            <label for="optiontwo" class="right">Perro</label>
+
+            <span aria-hidden="true"></span>
+        </div>
+
+         <div class="switch3">
+            <input name="radio" type="radio" value="optionone" id="optionone" checked>
+            <label for="optionone">Adulto</label>
+
+            <input name="radio" type="radio" value="optiontwo" id="optiontwo">
+            <label for="optiontwo" class="right">Cachorro</label>
+
+            <span aria-hidden="true"></span>
+        </div>
 
     </div>
 
     <div>
         <ul>
             {{#each productos}}
-                <li>
-                    <h3>{{nombre}}</h3>
-                    <p>{{precio}}</p>
-                    <img src="../fotos/{{imagen}}" alt="" width="500px">
-                </li>
+            <li>
+                <h3>{{nombre}}</h3>
+                <p>{{precio}}</p>
+                <img src="../fotos/{{imagen}}" alt="" width="500px">
+            </li>
             {{/each}}
         </ul>
     </div>
 
 
-    <script src="/scripts/tienda.js"></script>
+     <script src="/scripts/tienda.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
 </body>
 
 </html>

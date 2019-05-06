@@ -5,6 +5,11 @@ $blanco: #ffffff;
 $negro: #231f20;
 
 
+html{
+  margin: 2px;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
 
 body {
     font-size: 18px;
@@ -42,7 +47,7 @@ body {
 
   .outer-container {
     width: 100%;
-    min-height: 1400px;
+    min-height: 600px;
   }
   
   .banner {
@@ -53,15 +58,12 @@ body {
     background-color: #000;
     transform-style: preserve-3d;
     transform: translatez(0);
-    
-    &__image, &__caption {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    
+      
     &__image {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
       height: 800px;
       z-index: 10;
       overflow: hidden;
@@ -73,28 +75,206 @@ body {
     }
     
     &__caption {
-     background: (0,0,0,0.3);
+      font-family: 'Poppins', sans-serif;
+      width: 45%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: rgba(255,255,255, 0.7);
       height: auto;
       z-index: 20;
-      text-align: center;
-      color: $naranja;
+      text-align: left;
       position: relative;
       top: 50%;
       transform: translateY(-50%);
       margin-top: -10px;
-      padding-left: 20px;
+      padding-bottom: 30px;
+      padding-left: 50px;
       padding-right: 20px;
       
       & h1 {
+        color: $naranja;
         font-size: 82px;
-        font-weight: 100;
-        letter-spacing: -1px;
-        font-family: 'Roboto', sans-serif;
+        font-weight: 30;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        padding-top: 20px;
+        margin-top: 20px;
+        padding-right: 30px;
+        line-height: 80px;
+
+      }
+      & h3{
+        margin-top: 0;
+        color: $azul;
+        letter-spacing: 7px;
+        font-size: 25px;
+        font-weight: lighter; 
+      }
+
+      & p {
+        color: $negro;
+        padding-right: 30px;
       }
       
-      & p {
-        margin-top: 20px;
+    }
+  }
+
+  .filtros{
+    background-color: coral;
+    margin: 1%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @mixin clearfix {
+    zoom: 1;
+    &:before,
+    &:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+    }
+    &:after {
+      clear: both;
+    }
+  }
+  $background: #007DA6;
+  $switchbg: #47A7DC;
+  $white: #252222;
+
+  .switch {
+    background-color: $switchbg;
+    width: 200px;
+    display: inline-block;
+    border-radius: 10px;
+    height: 40px;
+    padding: 2px;
+    position: relative;
+    @include clearfix;
+    label {
+      float: left;
+      width: 50%;
+      position: relative;
+      z-index: 2;
+      line-height: 40px;
+      cursor: pointer;
+      color: lighten($switchbg, 30%);
+      border-radius: 10px;
+    }
+    input[type="radio"]{
+      display: none;
+      &:checked + label {
+        color: $background;
+        font-weight: bold;
       }
     }
-    
+    span {
+      position: relative;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      display: block;
+      border-radius: 10px;
+      background-color: #FFF;
+      transition: all 200ms ease;
+      &.right {
+        left: 50%;
+        border-radius: 10px;
+        transition: all 200ms ease;
+      }
+    }
+  }
+
+  .switch2 {
+    background-color: $switchbg;
+    width: 200px;
+    display: inline-block;
+    border-radius: 10px;
+    height: 40px;
+    padding: 2px;
+    position: relative;
+    @include clearfix;
+    label {
+      float: left;
+      width: 50%;
+      position: relative;
+      z-index: 2;
+      line-height: 40px;
+      cursor: pointer;
+      color: lighten($switchbg, 30%);
+      border-radius: 10px;
+    }
+    input[type="radio"]{
+      display: none;
+      &:checked + label {
+        color: $background;
+        font-weight: bold;
+      }
+    }
+    span {
+      position: relative;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      display: block;
+      border-radius: 10px;
+      background-color: #FFF;
+      transition: all 200ms ease;
+      &.right {
+        left: 50%;
+        border-radius: 10px;
+        transition: all 200ms ease;
+      }
+    }
+  }
+
+  .switch3 {
+    background-color: $switchbg;
+    width: 200px;
+    display: inline-block;
+    border-radius: 10px;
+    height: 40px;
+    padding: 2px;
+    position: relative;
+    @include clearfix;
+    label {
+      float: left;
+      width: 50%;
+      position: relative;
+      z-index: 2;
+      line-height: 40px;
+      cursor: pointer;
+      color: lighten($switchbg, 30%);
+      border-radius: 10px;
+    }
+    input[type="radio"]{
+      display: none;
+      &:checked + label {
+        color: $background;
+        font-weight: bold;
+      }
+    }
+    span {
+      position: relative;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      display: block;
+      border-radius: 10px;
+      background-color: #FFF;
+      transition: all 200ms ease;
+      &.right {
+        left: 50%;
+        border-radius: 10px;
+        transition: all 200ms ease;
+      }
+    }
   }
