@@ -26,6 +26,7 @@ client.connect(function (err) {
 var app = express();
 
 app.use(express.static('public'));
+app.use(express.urlencoded({extended: true}));
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
@@ -45,12 +46,30 @@ app.get('/forma', function (request, response) {
     response.render('forma', contexto);
 });
 
+// la pagina del prodcuto escogido en la tienda
+app.get('/tienda/producto/:nombre', function (request, response) {
+    
+   var collection = db.collection('productos');
+   collection.find({nombre: request.params.nombre}).toArray(function(err ,docs){
+
+    var contexto = {
+        producto : docs[0]
+    }
+
+       response.render('producto',contexto);
+   });
+   
+});
 
 app.get('/tienda/:categoria?', function (request, response) {
 
 var query = {};
 if (request.params.categoria){
     query.categoria = request.params.categoria;
+}
+
+if(request.query.precio){
+    query.precio = {$lte: request.query.precio};
 }
 
     var collection = db.collection('productos');
@@ -62,6 +81,7 @@ if (request.params.categoria){
         var contexto = {
             productos: docs,
             categoria: request.params.categoria
+           // precio : request.params.categoria
         };
         response.render('tienda', contexto);
     });

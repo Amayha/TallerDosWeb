@@ -278,19 +278,33 @@ body {
     }
   }
 
+  .linea{
+    border: 1px solid $naranja;
+  }
+
   .lista{
-    background-color: coral;
+ 
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
+    list-style-type:none;
 
     &_item{
+      list-style-type:none;
+      background-color: coral;
+      flex-direction: column;
       padding: 10px;
+      justify-content: center;
    }
 
     &_imagen{
-      background-color: lightgray;
+      background-color: whitesmoke;
+    }
+
+    &_nombre{
+      color: $azul;
+      font-weight:bold;
     }
   }
 
@@ -326,21 +340,20 @@ animation:light 1s;
 -webkit-animation:light 1s;
 
 }
-
 @keyframes light {
-0% {
-    background-position:-600px; 
-}
-100% { 
-    background-position:0px; 
-}
-}
-    
-@-webkit-keyframes light {
-0% {
-    background-position:-600px; 
-}
-100% { 
-    background-position:0px; 
-}
-}
+  0% {
+      background-position:-600px; 
+  }
+  100% { 
+      background-position:0px; 
+  }
+  }
+      
+  @-webkit-keyframes light {
+  0% {
+      background-position:-600px; 
+  }
+  100% { 
+      background-position:0px; 
+  }
+  }
