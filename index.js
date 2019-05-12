@@ -26,7 +26,7 @@ client.connect(function (err) {
 var app = express();
 
 app.use(express.static('public'));
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
@@ -46,31 +46,37 @@ app.get('/forma', function (request, response) {
     response.render('forma', contexto);
 });
 
-// la pagina del prodcuto escogido en la tienda
-app.get('/tienda/producto/:nombre', function (request, response) {
-    
-   var collection = db.collection('productos');
-   collection.find({nombre: request.params.nombre}).toArray(function(err ,docs){
-
-    var contexto = {
-        producto : docs[0]
-    }
-
-       response.render('producto',contexto);
-   });
-   
-});
 
 app.get('/tienda/:categoria?', function (request, response) {
 
-var query = {};
-if (request.params.categoria){
-    query.categoria = request.params.categoria;
-}
+    var query = {};
+    //variables de control de los switch
+    var macho = false;
+    var hembra = false;
+    var gato = false;
+    var perro = false;
 
-if(request.query.precio){
-    query.precio = {$lte: request.query.precio};
-}
+    if (request.params.categoria) {
+        query.categoria = request.params.categoria;
+        switch (query.categoria) {
+            case 'macho':
+                macho=true;
+                break;
+            case 'hembra':
+                hembra = true;
+                break;
+            case 'perro':
+                perro = true;
+                break;
+            case 'gato':
+                gato=true;
+                break;
+        }
+    }
+
+    if (request.query.precio) {
+        query.precio = { $lte: request.query.precio };
+    }
 
     var collection = db.collection('productos');
 
@@ -80,15 +86,40 @@ if(request.query.precio){
 
         var contexto = {
             productos: docs,
-            categoria: request.params.categoria
-           // precio : request.params.categoria
+            categoria: request.params.categoria,
+            macho: macho,
+            hembra: hembra,
+            perro: perro,
+            gato: gato
+
+            // precio : request.params.categoria
         };
         response.render('tienda', contexto);
     });
 
 });
 
+// la pagina del producto escogido en la tienda
+app.get('/tienda/producto/:nombre', function (request, response) {
 
+    var query = {};
+
+    if (request.params.nombre) {
+        query.nombre = request.params.nombre;
+    }
+
+    var collection = db.collection('productos');
+    collection.find( query ).toArray(function (err, docs) {
+        assert.equal(err, null);
+        
+        var contexto = {
+            producto: docs[0]
+        }
+
+        response.render('producto', contexto);
+    });
+
+});
 
 
 console.log("Servidor iniciado...");

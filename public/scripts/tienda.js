@@ -92,8 +92,8 @@ if(botonProductoDetalle != null){
 
   window.addEventListener('load', paginaCargada);
 
-  $('.switch label').on('click', function () {
-    var indicator = $(this).parent('.switch').find('span');
+  $('.switchMacho label').on('click', function () {
+    var indicator = $(this).parent('.switchMacho').find('span');
     if ($(this).hasClass('right')) {
       $(indicator).addClass('right');
       console.log('Tiene Right');
@@ -101,41 +101,54 @@ if(botonProductoDetalle != null){
     } else {
       $(indicator).removeClass('right');
       console.log('Clic sobre label Izquierdo');
-      location.href = '/tienda/hembra';
+      location.href = '/tienda';
     }
-
-
-
   });
 
 
-  $('.switch2 label').on('click', function () {
-    var indicator = $(this).parent('.switch2').find('span');
+  $('.switchHembra label').on('click', function () {
+    var indicator = $(this).parent('.switchHembra').find('span');
+    if ($(this).hasClass('right')) {
+      $(indicator).addClass('right');
+      console.log('Tiene Right');
+      location.href = '/tienda/hembra';
+    } else {
+      $(indicator).removeClass('right');
+      console.log('Clic sobre label Izquierdo');
+      location.href = '/tienda';
+    }
+  });
+
+
+  $('.switchGato label').on('click', function () {
+    var indicator = $(this).parent('.switchGato').find('span');
+    if ($(this).hasClass('right')) {
+      $(indicator).addClass('right');
+      console.log('Tiene Right');
+      location.href = '/tienda/gato';
+    } else {
+      $(indicator).removeClass('right');
+      console.log('Clic sobre label Izquierdo');
+      location.href = '/tienda';
+    }
+  });
+
+
+  $('.switchPerro label').on('click', function () {
+    var indicator = $(this).parent('.switchPerro').find('span');
     if ($(this).hasClass('right')) {
       $(indicator).addClass('right');
       console.log('Tiene Right');
       location.href = '/tienda/perro';
     } else {
       $(indicator).removeClass('right');
-      
-      location.href = '/tienda/gato';
       console.log('Clic sobre label Izquierdo');
-    }
-  });
-
-  $('.switch3 label').on('click', function () {
-    var indicator = $(this).parent('.switch3').find('span');
-    if ($(this).hasClass('right')) {
-      $(indicator).addClass('right');
-      console.log('Tiene Right');
-      location.href = '/tienda/cachorro';
-    } else {
-      $(indicator).removeClass('right');
-      
-      location.href = '/tienda/adulto';
-      console.log('Clic sobre label Izquierdo');
+      location.href = '/tienda';
     }
   });
 
 
- 
+$('.lista_boton').on('click', function () {
+  console.log('Producto clik: ' + $(this).attr("id"));
+  location.href = '/tienda/producto/' + $(this).attr("id");
+});

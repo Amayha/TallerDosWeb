@@ -143,7 +143,7 @@ body {
   $switchbg: #47A7DC;
   $white: #252222;
 
-  .switch {
+  .switchMacho {
     background-color: $switchbg;
     width: 200px;
     display: inline-block;
@@ -188,7 +188,7 @@ body {
     }
   }
 
-  .switch2 {
+  .switchHembra {
     background-color: $switchbg;
     width: 200px;
     display: inline-block;
@@ -233,7 +233,52 @@ body {
     }
   }
 
-  .switch3 {
+  .switchGato {
+    background-color: $switchbg;
+    width: 200px;
+    display: inline-block;
+    border-radius: 10px;
+    height: 40px;
+    padding: 2px;
+    position: relative;
+    @include clearfix;
+    label {
+      float: left;
+      width: 50%;
+      position: relative;
+      z-index: 2;
+      line-height: 40px;
+      cursor: pointer;
+      color: lighten($switchbg, 30%);
+      border-radius: 10px;
+    }
+    input[type="radio"]{
+      display: none;
+      &:checked + label {
+        color: $background;
+        font-weight: bold;
+      }
+    }
+    span {
+      position: relative;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      display: block;
+      border-radius: 10px;
+      background-color: #FFF;
+      transition: all 200ms ease;
+      &.right {
+        left: 50%;
+        border-radius: 10px;
+        transition: all 200ms ease;
+      }
+    }
+  }
+
+  .switchPerro {
     background-color: $switchbg;
     width: 200px;
     display: inline-block;
