@@ -115,6 +115,42 @@
             {{/if}}
         </div>
 
+ <div class="switchAdulto">
+            <input name="radio" type="radio" value="optionone" id="optionone" checked>
+            <label for="optionone">OFF</label>
+
+            <input name="radio" type="radio" value="optiontwo" id="optiontwo">
+            <label id="selector1" for="optiontwo" class="right">Adulto</label>
+
+            <span aria-hidden="true"></span>
+
+           {{#if adulto}}
+                <script>
+                    var indicator = $(selector1).parent('.switchAdulto').find('span');
+                    $(indicator).addClass('right');
+
+                </script>
+            {{/if}}
+        </div>
+
+         <div class="switchCachorro">
+            <input name="radio" type="radio" value="optionone" id="optionone" checked>
+            <label for="optionone">OFF</label>
+
+            <input name="radio" type="radio" value="optiontwo" id="optiontwo">
+            <label id="selector1" for="optiontwo" class="right">Cachorro</label>
+
+            <span aria-hidden="true"></span>
+
+           {{#if perro}}
+                <script>
+                    var indicator = $(selector1).parent('.switchCachorro').find('span');
+                    $(indicator).addClass('right');
+
+                </script>
+            {{/if}}
+        </div>
+
         
 
         
