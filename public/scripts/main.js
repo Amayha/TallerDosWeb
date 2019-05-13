@@ -1,5 +1,16 @@
 function paginaCargada() {
 
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
+        }
+      }
+
+
+
     jQuery(document).ready(function ($) {
         var dragging = false,
             scrolling = false,

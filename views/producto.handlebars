@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Producto</title>
+
+    <link rel="stylesheet" href="/styles/producto.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
+
 <body>
-    
-    <div class="carrito">
-        <p>Carrito</p>
-        <span class="carrito__num"></span>
-    </div>
+    <nav class="nav">
+        <img src="/fotos/logo.png" alt="" class="logo">
+        <a href="" class="nav__item">Inicio</a>
+        <a href="" class="nav__item">Sobre nosotros</a>
+        <a href="" class="nav__item">Sedes</a>
+        <a href="" class="nav__item">Amigos</a>
+        <img src="/fotos/lupa.png" alt="" class="nav__lupa">
+        <img src="/fotos/pata.png" alt="" class="nav__pata">
+    </nav>
 
-    <h1 class="producto__nombre">{{producto.nombre}}</h1>
-    <img  src="../../fotos/{{producto.imagen}}" alt="">
-    <p class="producto__precio">{{producto.precio}}</p>
+    <article class="producto">
+        <div class="producto__uno">
+            <img class="producto__foto" src="../../fotos/{{producto.imagen}}" alt="">
+            <!--<button id="{{nombre}}" class="lista_boton light">Adoptar</button>-->
+        </div>
+        <div class="purchase">
+            <ul>
+                <li class="purchase__item">
+                    <strong>{{producto.nombre}}</strong>
+                    <span class="purchase-description">{{producto.categoria.[0]}}</span>
+                    <span class="purchase-description">{{producto.categoria.[1]}}</span>
+                    <span class="purchase-description">{{producto.categoria.[2]}}</span>
+                    <big class="purchase-price">${{producto.precio}}</big>
+                    <span class="purchase-button">Firmar</span>
+                </li>
+            </ul>
+        </div>
 
-    <div>
+        <div class="mapa" id="map"> </div>
 
-        <button class="producto-detalle__carrito">Agregar al carrito</button>
-    </div>
+    </article> <!-- fin de producto >-->
 
 
-<script src="/scripts/tienda.js"></script>
+
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejnN93HPJKKgMR0R5KXTqA0vJVHG_JCQ&callback=initMap"async defer></script>
+    <script src="/scripts/producto.js"></script>
 </body>
+
 </html>

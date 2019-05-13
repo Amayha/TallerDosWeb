@@ -20,7 +20,7 @@ body {
     box-sizing: border-box;
   }
   
-
+/////// inicio nav
   .nav{
     display: block;
     font-size: 20px;
@@ -34,8 +34,16 @@ body {
 
 
     .logo{
-      width: 90px;
+      width: 110px;
     }
+
+  &__lupa{
+    width: 60px;
+  }
+
+  &__pata{
+    width: 80px;
+  }
 
     &__item{
       text-decoration: none;   
@@ -44,6 +52,31 @@ body {
     }
 
   }
+
+  .nav__item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+
+.nav__item:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+
+.nav__lupa:hover {
+  transform: scale(1.2); 
+}
+
+.nav__pata:hover {
+  transform: scale(1.2); 
+}
+
+////////////////fin de nav
+
 
   .outer-container {
     width: 100%;
@@ -412,6 +445,12 @@ body {
       }
     }
   }
+
+
+
+
+
+
   .linea{
     border: 1px solid $naranja;
   }

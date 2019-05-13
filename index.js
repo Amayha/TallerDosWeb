@@ -55,12 +55,14 @@ app.get('/tienda/:categoria?', function (request, response) {
     var hembra = false;
     var gato = false;
     var perro = false;
+    var adulto = false;
+    var cachorro = false;
 
     if (request.params.categoria) {
         query.categoria = request.params.categoria;
         switch (query.categoria) {
             case 'macho':
-                macho=true;
+                macho = true;
                 break;
             case 'hembra':
                 hembra = true;
@@ -69,7 +71,13 @@ app.get('/tienda/:categoria?', function (request, response) {
                 perro = true;
                 break;
             case 'gato':
-                gato=true;
+                gato = true;
+                break
+            case 'adulto':
+                adulto = true;
+                break;
+            case 'cachorro':
+                cachorro = true;
                 break;
         }
     }
@@ -90,7 +98,9 @@ app.get('/tienda/:categoria?', function (request, response) {
             macho: macho,
             hembra: hembra,
             perro: perro,
-            gato: gato
+            gato: gato,
+            adulto: adulto,
+            cachorro: cachorro
 
             // precio : request.params.categoria
         };
@@ -109,9 +119,9 @@ app.get('/tienda/producto/:nombre', function (request, response) {
     }
 
     var collection = db.collection('productos');
-    collection.find( query ).toArray(function (err, docs) {
+    collection.find(query).toArray(function (err, docs) {
         assert.equal(err, null);
-        
+
         var contexto = {
             producto: docs[0]
         }
@@ -120,6 +130,48 @@ app.get('/tienda/producto/:nombre', function (request, response) {
     });
 
 });
+
+
+//Ruta al carrito
+app.get('/pago', function(req, res) {
+   
+    var contexto = {
+       
+    };
+    res.render('pago',contexto);
+});
+
+//Ruta al checkout
+app.post('/checkout', function(req, res) {
+    
+    var pedido = {
+       correo:req.body.correo,
+       telefono:req.body.telefono,
+       nombre:req.body.nombre,
+       apellido:req.body.apellido,
+       direccion:req.body.direccion,
+       pais:req.body.pais,
+       estado:req.body.estado,
+       ciudad:req.body.ciudad,
+       zip:req.body.zip,
+       tarjeta:req.body.tarjeta,
+       fecha:req.body.fecha,
+       mes:req.body.mes,
+       cvv:req.body.cvv,
+       nombre__tarjeta:req.body.nombre__tarjeta
+       
+    };
+
+    var collection=clientdb.collection('pedidos');
+    collection.insertOne(pedido,function(err){
+        assert.equal(err,null);
+        console.log("Pedido Guardado");
+
+    });
+    res.redirect('/');
+});
+
+
 
 
 console.log("Servidor iniciado...");

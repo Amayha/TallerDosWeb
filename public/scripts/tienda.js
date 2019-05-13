@@ -147,6 +147,32 @@ if(botonProductoDetalle != null){
     }
   });
 
+  $('.switchAdulto label').on('click', function () {
+    var indicator = $(this).parent('.switchAdulto').find('span');
+    if ($(this).hasClass('right')) {
+      $(indicator).addClass('right');
+      console.log('Tiene Right');
+      location.href = '/tienda/adulto';
+    } else {
+      $(indicator).removeClass('right');
+      console.log('Clic sobre label Izquierdo');
+      location.href = '/tienda';
+    }
+  });
+
+  $('.switchCachorro label').on('click', function () {
+    var indicator = $(this).parent('.switchCachorro').find('span');
+    if ($(this).hasClass('right')) {
+      $(indicator).addClass('right');
+      console.log('Tiene Right');
+      location.href = '/tienda/cachorro';
+    } else {
+      $(indicator).removeClass('right');
+      console.log('Clic sobre label Izquierdo');
+      location.href = '/tienda';
+    }
+  });
+
 
 $('.lista_boton').on('click', function () {
   console.log('Producto clik: ' + $(this).attr("id"));

@@ -22,6 +22,7 @@ html{
   height: 100%;
   flex-direction: column;
 
+
   .nav{
     display: block;
     font-size: 20px;
@@ -35,8 +36,16 @@ html{
 
 
     .logo{
-      width: 90px;
+      width: 110px;
     }
+
+  &__lupa{
+    width: 60px;
+  }
+
+  &__pata{
+    width: 80px;
+  }
 
     &__item{
       text-decoration: none;   
@@ -52,12 +61,75 @@ html{
       height:50%;
       flex-basis: 10%;
       border-radius: 6px;
-      border: none;
+      border: 3px solid $azul;
       padding: 6px 12px; 
     }
 
+    &__boton:hover{
+      box-shadow: 0 6px 18px 0 rgba(#000, 0.1);
+      transform: translateY(-6px);
+    }
 
   }
+  .nav .icon {
+    display: none;
+  }
+
+  .nav a {
+    float: left;
+    display: block;
+    color:$naranja;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .nav__item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+
+.nav__item:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+
+.nav__lupa:hover {
+  transform: scale(1.2); 
+}
+
+.nav__pata:hover {
+  transform: scale(1.2); 
+}
+
+
+@media screen and (max-width: 600px) {
+  .nav a:not(:first-child) {display: none;}
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav.responsive {position: relative;}
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
 
   .body{
 
