@@ -141,34 +141,32 @@ app.get('/pago', function(req, res) {
     res.render('pago',contexto);
 });
 
-//Ruta al checkout
-app.post('/checkout', function(req, res) {
-    
+
+//Ruta guardar en Mongo
+app.post('/adopciomexitosa', function(req, res) {
+    console.log(req.body);
+   
     var pedido = {
-       correo:req.body.correo,
-       telefono:req.body.telefono,
-       nombre:req.body.nombre,
-       apellido:req.body.apellido,
-       direccion:req.body.direccion,
+       correo:req.body.email,
+       telefono:req.body.phone,
+       nombre:req.body.fname,
+       apellido:req.body.lname,
+       direccion:req.body.address,
        pais:req.body.pais,
        estado:req.body.estado,
        ciudad:req.body.ciudad,
-       zip:req.body.zip,
        tarjeta:req.body.tarjeta,
-       fecha:req.body.fecha,
-       mes:req.body.mes,
        cvv:req.body.cvv,
-       nombre__tarjeta:req.body.nombre__tarjeta
-       
+       productos: JSON.parse(req.body.productos)
     };
 
-    var collection=clientdb.collection('pedidos');
+    var collection=db.collection('pedidos');
     collection.insertOne(pedido,function(err){
         assert.equal(err,null);
         console.log("Pedido Guardado");
 
     });
-    res.redirect('/');
+    res.redirect('/felicitaciones');
 });
 
 

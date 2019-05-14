@@ -20,31 +20,51 @@
         <img src="/fotos/pata.png" alt="" class="nav__pata">
     </nav>
 
+
+    <div class="carro--flotante">
+        <div class="">
+            <a href="/forma">
+            <img class="carro__imagen"
+                src="https://purepng.com/public/uploads/large/purepng.com-shopping-cartshoppingcarttrolleycarriagebuggysupermarkets-1421526532356pnf5n.png"
+                alt="">
+            </a>
+        </div>
+
+        <div>
+            <span class="carro__num">0</span>
+        </div>
+
+
+    </div>
+
+
     <article class="producto">
         <div class="producto__uno">
             <img class="producto__foto" src="../../fotos/{{producto.imagen}}" alt="">
-            <!--<button id="{{nombre}}" class="lista_boton light">Adoptar</button>-->
+            <button id="{{nombre}}" class="lista_boton light">Adoptar</button>
         </div>
         <div class="purchase">
             <ul>
                 <li class="purchase__item">
-                    <strong>{{producto.nombre}}</strong>
+                    <strong class="producto__nombre">{{producto.nombre}}</strong>
                     <span class="purchase-description">{{producto.categoria.[0]}}</span>
                     <span class="purchase-description">{{producto.categoria.[1]}}</span>
                     <span class="purchase-description">{{producto.categoria.[2]}}</span>
                     <big class="purchase-price">${{producto.precio}}</big>
-                    <span class="purchase-button">Firmar</span>
+                    <span class="purchase-button">Ver condiciones</span>
                 </li>
             </ul>
         </div>
-
-        <div class="mapa" id="map"> </div>
+        <div class="producto__texto">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum pariatur distinctio quae maiores eveniet
+                fuga accusantium veritatis voluptatibus praesentium harum impedit sit hic nostrum totam cupiditate,
+                magnam accusamus perspiciatis ducimus.</p>
+            <img class="producto__texto__img" src="/fotos/certificado.png" alt="">
+        </div>
 
     </article> <!-- fin de producto >-->
 
 
-
-   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAejnN93HPJKKgMR0R5KXTqA0vJVHG_JCQ&callback=initMap"async defer></script>
     <script src="/scripts/producto.js"></script>
 </body>
 

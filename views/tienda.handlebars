@@ -154,9 +154,23 @@
     </div>
     <!--Fin de filtros-->
 
+    <div class="carro--flotante">
+        <div class="">
+            <a href="/forma"><img class="carro__imagen" src="https://purepng.com/public/uploads/large/purepng.com-shopping-cartshoppingcarttrolleycarriagebuggysupermarkets-1421526532356pnf5n.png" alt=""></a>
+        </div>
+        <div >
+            <span class="carro__num">0</span>
+        </div>
+    </div>
+
     <div>
         <hr class="linea">
     </div>
+
+
+
+
+
 
     <div>
         <ul class="lista">
@@ -166,7 +180,8 @@
                 <h3 class="lista_nombre">{{nombre}}</h3>
                 <p class="lista_precio">{{precio}}</p>
                 <p class="lista_categoria">{{categoria}}</p>
-                <button id="{{nombre}}" class="lista_boton light">Adoptar</button>
+                <button id="{{nombre}}" class="lista_boton light">Ver detalles</button>
+                <button class="lista__adoptar">Adoptar</button>
             </li>
             {{/each}}
         </ul>

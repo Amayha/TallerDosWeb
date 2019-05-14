@@ -447,7 +447,22 @@ body {
   }
 
 
+.carro--flotante{
+  display: flex;
+  flex-direction: row;
+background-color: $crema;
+  position: fixed;
+  right: 0px;
+  top: 300px;
+  z-index: 100;
 
+}
+.carro__imagen{
+  width: 100px;
+}
+.carro__num{
+  font-size: 30px;
+}
 
 
 

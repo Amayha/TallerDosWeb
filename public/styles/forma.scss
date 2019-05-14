@@ -27,8 +27,33 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
 }
+
+
+.contenido{
+	display: flex;
+	flex-direction: row;
+
+	&--carrito{
+		display: flex;
+		flex-direction: column;
+		background-color: green;
+		flex-basis: 50%;
+		//justify-content: center;
+		margin-left: 30px; 
+	}
+
+	&--forma{
+		justify-content: center;
+		flex-basis: 50%;
+	}
+}
+
+
+
+
 /*form styles*/
 #msform {
+
     width: 800px;
     height: 1000px;
 	margin: 50px auto;
