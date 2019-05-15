@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="/styles/tienda.css">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -32,9 +37,10 @@
                 <h1>Peluditos</h1>
                 <h3>Centro de adopcion</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur magni dolorem reiciendis ea
-                    iste tenetur consequatur, ipsam maiores, rerum molestiae facere incidunt placeat? Inventore delectus
-                    deleniti consectetur, atque iste temporibus?
+                    es el hogar de cientos de perros víctimas del maltrato y del abandono. Está ubicado en Ginebra,
+                    Valle del Cauca, Colombia. día a día está en la búsqueda del sustento de más de 900 animales que
+                    permanentemente viven en dicho Refugio, considerado como el albergue privado más populoso del mundo
+                    y el de mejor infraestructura e instalaciones en Latino América.
                 </p>
             </div>
         </div>
@@ -42,123 +48,134 @@
 
 
     <div class="filtros">
-        <div class="switchMacho">
-            <input name="radio" type="radio" value="optionone" id="optionone" checked>
-            <label for="optionone">OFF</label>
+        <div class="filtrosUno">
+            <div class="switchMacho">
+                <input name="radio5" type="radio" value="optionone" id="optionone" checked>
+                <label for="optionone">OFF</label>
 
-            <input name="radio" type="radio" value="optiontwo" id="optiontwo">
-            <label id="selector1" for="optiontwo" class="right">Macho</label>
+                <input name="radio5" type="radio" value="optiontwo" id="optiontwo">
+                <label id="selector1" for="optiontwo" class="right">Macho</label>
 
-            <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
 
-            {{#if macho}}
-            <script>
-                var indicator = $(selector1).parent('.switchMacho').find('span');
-                $(indicator).addClass('right');
+                {{#if macho}}
+                <script>
+                    var indicator = $(selector1).parent('.switchMacho').find('span');
+                    $(indicator).addClass('right');
 
-            </script>
-            {{/if}}
+                </script>
+                {{/if}}
+            </div>
+
+            <div class="switchHembra">
+                <input name="radio4" type="radio" value="optionone" id="optionone" checked>
+                <label for="optionone">OFF</label>
+
+                <input name="radio4" type="radio" value="optiontwo" id="optiontwo">
+                <label id="selector1" for="optiontwo" class="right">Hembra</label>
+
+                <span aria-hidden="true"></span>
+
+                {{#if hembra}}
+                <script>
+                    var indicator = $(selector1).parent('.switchHembra').find('span');
+                    $(indicator).addClass('right');
+
+                </script>
+                {{/if}}
+            </div>
         </div>
 
-        <div class="switchHembra">
-            <input name="radio" type="radio" value="optionone" id="optionone" checked>
-            <label for="optionone">OFF</label>
 
-            <input name="radio" type="radio" value="optiontwo" id="optiontwo">
-            <label id="selector1" for="optiontwo" class="right">Hembra</label>
 
-            <span aria-hidden="true"></span>
+        <div class="filtrosUno">
+            <div class="switchGato">
+                <input name="radio3" type="radio" value="optionone" id="optionone" checked>
+                <label for="optionone">OFF</label>
 
-            {{#if hembra}}
-            <script>
-                var indicator = $(selector1).parent('.switchHembra').find('span');
-                $(indicator).addClass('right');
+                <input name="radio3" type="radio" value="optiontwo" id="optiontwo">
+                <label id="selector1" for="optiontwo" class="right">Gato</label>
 
-            </script>
-            {{/if}}
+                <span aria-hidden="true"></span>
+
+                {{#if gato}}
+                <script>
+                    var indicator = $(selector1).parent('.switchGato').find('span');
+                    $(indicator).addClass('right');
+
+                </script>
+                {{/if}}
+            </div>
+
+            <div class="switchPerro">
+                <input name="radio2" type="radio" value="optionone" id="optionone" checked>
+                <label for="optionone">OFF</label>
+
+                <input name="radio2" type="radio" value="optiontwo" id="optiontwo">
+                <label id="selector1" for="optiontwo" class="right">Perro</label>
+
+                <span aria-hidden="true"></span>
+
+                {{#if perro}}
+                <script>
+                    var indicator = $(selector1).parent('.switchPerro').find('span');
+                    $(indicator).addClass('right');
+
+                </script>
+                {{/if}}
+            </div>
+
+        </div>
+
+        <div class="filtrosUno">
+            <div class="switchAdulto">
+                <input name="radio1" type="radio" value="optionone" id="optionone1" checked>
+                <label for="optionone1">OFF</label>
+
+                <input name="radio1" type="radio" value="optiontwo" id="optiontwo">
+                <label id="selector1" for="optiontwo" class="right">Adulto</label>
+
+                <span aria-hidden="true"></span>
+
+                {{#if adulto}}
+                <script>
+                    var indicator = $(selector1).parent('.switchAdulto').find('span');
+                    $(indicator).addClass('right');
+
+                </script>
+                {{/if}}
+            </div>
+
+            <div class="switchCachorro">
+                <input name="radio" type="radio" value="optionone" id="optionone" checked>
+                <label for="optionone">OFF</label>
+
+                <input name="radio" type="radio" value="optiontwo" id="optiontwo">
+                <label id="selector1" for="optiontwo" class="right">Cachorro</label>
+
+                <span aria-hidden="true"></span>
+
+                {{#if cachorro}}
+                <script>
+                    var indicator = $(selector1).parent('.switchCachorro').find('span');
+                    $(indicator).addClass('right');
+
+                </script>
+                {{/if}}
+            </div>
         </div>
 
 
-
-        <div class="switchGato">
-            <input name="radio" type="radio" value="optionone" id="optionone" checked>
-            <label for="optionone">OFF</label>
-
-            <input name="radio" type="radio" value="optiontwo" id="optiontwo">
-            <label id="selector1" for="optiontwo" class="right">Gato</label>
-
-            <span aria-hidden="true"></span>
-
-            {{#if gato}}
-            <script>
-                var indicator = $(selector1).parent('.switchGato').find('span');
-                $(indicator).addClass('right');
-
-            </script>
-            {{/if}}
-        </div>
-
-        <div class="switchPerro">
-            <input name="radio" type="radio" value="optionone" id="optionone" checked>
-            <label for="optionone">OFF</label>
-
-            <input name="radio" type="radio" value="optiontwo" id="optiontwo">
-            <label id="selector1" for="optiontwo" class="right">Perro</label>
-
-            <span aria-hidden="true"></span>
-
-            {{#if perro}}
-            <script>
-                var indicator = $(selector1).parent('.switchPerro').find('span');
-                $(indicator).addClass('right');
-
-            </script>
-            {{/if}}
-        </div>
-
-        <div class="switchAdulto">
-            <input name="radio" type="radio" value="optionone" id="optionone" checked>
-            <label for="optionone">OFF</label>
-
-            <input name="radio" type="radio" value="optiontwo" id="optiontwo">
-            <label id="selector1" for="optiontwo" class="right">Adulto</label>
-
-            <span aria-hidden="true"></span>
-
-            {{#if adulto}}
-            <script>
-                var indicator = $(selector1).parent('.switchAdulto').find('span');
-                $(indicator).addClass('right');
-
-            </script>
-            {{/if}}
-        </div>
-
-        <div class="switchCachorro">
-            <input name="radio" type="radio" value="optionone" id="optionone" checked>
-            <label for="optionone">OFF</label>
-
-            <input name="radio" type="radio" value="optiontwo" id="optiontwo">
-            <label id="selector1" for="optiontwo" class="right">Cachorro</label>
-
-            <span aria-hidden="true"></span>
-
-            {{#if cachorro}}
-            <script>
-                var indicator = $(selector1).parent('.switchCachorro').find('span');
-                $(indicator).addClass('right');
-
-            </script>
-            {{/if}}
-        </div>
     </div>
     <!--Fin de filtros-->
 
     <div class="carro--flotante">
         <div class="">
-            <a href="/forma"><img class="carro__imagen" src="https://purepng.com/public/uploads/large/purepng.com-shopping-cartshoppingcarttrolleycarriagebuggysupermarkets-1421526532356pnf5n.png" alt=""></a>
+            <a href="/forma"><img class="carro__imagen"
+                    src="https://purepng.com/public/uploads/large/purepng.com-shopping-cartshoppingcarttrolleycarriagebuggysupermarkets-1421526532356pnf5n.png"
+                    alt=""></a>
         </div>
-        <div >
+        <div>
             <span class="carro__num">0</span>
         </div>
     </div>
@@ -167,21 +184,23 @@
         <hr class="linea">
     </div>
 
-
-
-
-
-
     <div>
         <ul class="lista">
             {{#each productos}}
             <li class="lista_item">
-                <img src="../fotos/{{imagen}}" alt="" width="400px" class="lista_imagen">
+                <img src="../fotos/{{imagen}}" alt="" width="300px" class="lista_imagen">
                 <h3 class="lista_nombre">{{nombre}}</h3>
-                <p class="lista_precio">{{precio}}</p>
-                <p class="lista_categoria">{{categoria}}</p>
-                <button id="{{nombre}}" class="lista_boton light">Ver detalles</button>
-                <button class="lista__adoptar">Adoptar</button>
+                <div class="lista__categorias">
+                    <p class="lista_categoria">{{categoria.[0]}}</p>
+                    <p class="lista_categoria">{{categoria.[1]}}</p>
+                    <p class="lista_categoria">{{categoria.[2]}}</p>
+                </div>
+                <p class="lista_precio">${{precio}}</p>
+                <div class="lista__botones">
+                    <button class="lista__adoptar light2">Adoptar</button>
+                    <button id="{{nombre}}" class="lista_boton light">Ver detalles</button>
+                </div>
+
             </li>
             {{/each}}
         </ul>
@@ -190,6 +209,43 @@
     <div>
         <hr class="linea">
     </div>
+
+
+    <footer class="pie">
+        <div class="search-text">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="form">
+                        <h4>REGISTRATE</h4>
+                        <form id="search-form" class="form-search form-horizontal">
+                            <input type="text" class="input-search" placeholder="Correo">
+                            <button type="submit" class="btn-search">Enviar</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-top">
+            <div class="container1">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                    <a href="#"><i class="fa fa-facebook fa-2x"></i>Facebook</a>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                    <a href="#"><i class="fa fa-twitter fa-2x"></i>Twitter</a>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                    <a href="#"><i class="fa fa-github fa-2x"></i>Github</a>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 text-center">
+                    <a href="#"><i class="fa fa-google-plus fa-2x"></i>Google</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
     <script src="/scripts/tienda.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
 </body>

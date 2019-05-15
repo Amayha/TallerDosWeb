@@ -154,9 +154,19 @@ body {
   }
 
   .filtros{
+    height: 150px;
     margin: 1%;
-    padding: 30px;
+    padding: 10px;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .filtrosUno{
+    display: flex;
+    height: 130px;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
@@ -173,32 +183,34 @@ body {
     }
   }
   $background: #007DA6;
-  $switchbg: #47A7DC;
+  $switchbg: #496eb5;
   $white: #252222;
 
+
   .switchMacho {
-    background-color: $switchbg;
+    background-color: $azul;
     width: 200px;
     display: inline-block;
-    border-radius: 10px;
-    height: 40px;
+    border-radius: 20px;
+    height: 50px;
     padding: 2px;
     position: relative;
     @include clearfix;
     label {
+      padding: 5px;
       float: left;
       width: 50%;
       position: relative;
       z-index: 2;
       line-height: 40px;
       cursor: pointer;
-      color: lighten($switchbg, 30%);
+      color:$negro;
       border-radius: 10px;
     }
     input[type="radio"]{
       display: none;
       &:checked + label {
-        color: $background;
+        color: $negro;
         font-weight: bold;
       }
     }
@@ -210,40 +222,41 @@ body {
       width: 50%;
       height: 100%;
       display: block;
-      border-radius: 10px;
-      background-color: #FFF;
+      border-radius: 20px;
+      background-color: #ffffff;
       transition: all 200ms ease;
       &.right {
         left: 50%;
-        border-radius: 10px;
+        border-radius: 20px;
         transition: all 200ms ease;
       }
     }
   }
 
   .switchHembra {
-    background-color: $switchbg;
+    background-color: $naranja;
     width: 200px;
     display: inline-block;
-    border-radius: 10px;
-    height: 40px;
+    border-radius: 20px;
+    height: 50px;
     padding: 2px;
     position: relative;
     @include clearfix;
     label {
+      padding: 5px;
       float: left;
       width: 50%;
       position: relative;
       z-index: 2;
       line-height: 40px;
       cursor: pointer;
-      color: lighten($switchbg, 30%);
+      color:$negro;
       border-radius: 10px;
     }
     input[type="radio"]{
       display: none;
       &:checked + label {
-        color: $background;
+        color: $negro;
         font-weight: bold;
       }
     }
@@ -255,40 +268,41 @@ body {
       width: 50%;
       height: 100%;
       display: block;
-      border-radius: 10px;
-      background-color: #FFF;
+      border-radius: 20px;
+      background-color: #ffffff;
       transition: all 200ms ease;
       &.right {
         left: 50%;
-        border-radius: 10px;
+        border-radius: 20px;
         transition: all 200ms ease;
       }
     }
   }
 
   .switchGato {
-    background-color: $switchbg;
+    background-color: $azul;
     width: 200px;
     display: inline-block;
-    border-radius: 10px;
-    height: 40px;
+    border-radius: 20px;
+    height: 50px;
     padding: 2px;
     position: relative;
     @include clearfix;
     label {
+      padding: 5px;
       float: left;
       width: 50%;
       position: relative;
       z-index: 2;
       line-height: 40px;
       cursor: pointer;
-      color: lighten($switchbg, 30%);
+      color:$negro;
       border-radius: 10px;
     }
     input[type="radio"]{
       display: none;
       &:checked + label {
-        color: $background;
+        color: $negro;
         font-weight: bold;
       }
     }
@@ -300,40 +314,41 @@ body {
       width: 50%;
       height: 100%;
       display: block;
-      border-radius: 10px;
-      background-color: #FFF;
+      border-radius: 20px;
+      background-color: #ffffff;
       transition: all 200ms ease;
       &.right {
         left: 50%;
-        border-radius: 10px;
+        border-radius: 20px;
         transition: all 200ms ease;
       }
     }
   }
 
   .switchPerro {
-    background-color: $switchbg;
+    background-color: $naranja;
     width: 200px;
     display: inline-block;
-    border-radius: 10px;
-    height: 40px;
+    border-radius: 20px;
+    height: 50px;
     padding: 2px;
     position: relative;
     @include clearfix;
     label {
+      padding: 5px;
       float: left;
       width: 50%;
       position: relative;
       z-index: 2;
       line-height: 40px;
       cursor: pointer;
-      color: lighten($switchbg, 30%);
+      color:$negro;
       border-radius: 10px;
     }
     input[type="radio"]{
       display: none;
       &:checked + label {
-        color: $background;
+        color: $negro;
         font-weight: bold;
       }
     }
@@ -345,40 +360,41 @@ body {
       width: 50%;
       height: 100%;
       display: block;
-      border-radius: 10px;
-      background-color: #FFF;
+      border-radius: 20px;
+      background-color: #ffffff;
       transition: all 200ms ease;
       &.right {
         left: 50%;
-        border-radius: 10px;
+        border-radius: 20px;
         transition: all 200ms ease;
       }
     }
   }
 
   .switchAdulto{
-    background-color: $switchbg;
+    background-color: $azul;
     width: 200px;
     display: inline-block;
-    border-radius: 10px;
-    height: 40px;
+    border-radius: 20px;
+    height: 50px;
     padding: 2px;
     position: relative;
     @include clearfix;
     label {
+      padding: 5px;
       float: left;
       width: 50%;
       position: relative;
       z-index: 2;
       line-height: 40px;
       cursor: pointer;
-      color: lighten($switchbg, 30%);
+      color:$negro;
       border-radius: 10px;
     }
     input[type="radio"]{
       display: none;
       &:checked + label {
-        color: $background;
+        color: $negro;
         font-weight: bold;
       }
     }
@@ -390,40 +406,41 @@ body {
       width: 50%;
       height: 100%;
       display: block;
-      border-radius: 10px;
-      background-color: #FFF;
+      border-radius: 20px;
+      background-color: #ffffff;
       transition: all 200ms ease;
       &.right {
         left: 50%;
-        border-radius: 10px;
+        border-radius: 20px;
         transition: all 200ms ease;
       }
     }
   }
 
   .switchCachorro {
-    background-color: $switchbg;
+    background-color: $naranja;
     width: 200px;
     display: inline-block;
-    border-radius: 10px;
-    height: 40px;
+    border-radius: 20px;
+    height: 50px;
     padding: 2px;
     position: relative;
     @include clearfix;
     label {
+      padding: 5px;
       float: left;
       width: 50%;
       position: relative;
       z-index: 2;
       line-height: 40px;
       cursor: pointer;
-      color: lighten($switchbg, 30%);
+      color:$negro;
       border-radius: 10px;
     }
     input[type="radio"]{
       display: none;
       &:checked + label {
-        color: $background;
+        color: $negro;
         font-weight: bold;
       }
     }
@@ -435,12 +452,12 @@ body {
       width: 50%;
       height: 100%;
       display: block;
-      border-radius: 10px;
-      background-color: #FFF;
+      border-radius: 20px;
+      background-color: #ffffff;
       transition: all 200ms ease;
       &.right {
         left: 50%;
-        border-radius: 10px;
+        border-radius: 20px;
         transition: all 200ms ease;
       }
     }
@@ -476,14 +493,18 @@ background-color: $crema;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
+    
     list-style-type:none;
+    line-height: 1px;
 
     &_item{
       list-style-type:none;
-      background-color: coral;
       flex-direction: column;
       padding: 10px;
       justify-content: center;
+      align-content: center;
+      box-shadow: 10px 10px 5px #aaaaaa;
+      line-height: 10px;
    }
 
     &_imagen{
@@ -491,19 +512,39 @@ background-color: $crema;
     }
 
     &_nombre{
+      align-content: center;
+      justify-content: center;
+      font-size: 20px;
       color: $azul;
       font-weight:bold;
     }
   }
 
+.lista__botones{
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lista__categorias{
+  line-height: 15px;
+  display: flex;
+  flex-direction: row;
+  text-transform: capitalize;
+  justify-content: space-between;
+  padding: 5px;
+}
   .lista_boton{
+    display: flex;
+    justify-content: center;
     padding: 0.8em 0em;
-    width:200px;
+    width:150px;
     background: #ff6e00;
     border-radius:15px;
     border:0;
     color:#fff;
-    font-size:16px;
+    font-size:12px;
     font-family: Arial,Helvetica,sans-serif;
     font-weight:bold;
     cursor:pointer;
@@ -545,3 +586,170 @@ animation:light 1s;
       background-position:0px; 
   }
   }
+
+
+  .lista__adoptar{
+    display: flex;
+    justify-content: center;
+    padding: 0.8em 0em;
+    width:200px;
+    background: $azul;
+    border-radius:15px;
+    border:0;
+    color:#fff;
+    font-size:16px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight:bold;
+    cursor:pointer;
+    margin:1em 2em;
+    text-transform:uppercase;
+}
+.light2{
+background: -moz-linear-gradient(-45deg, $azul 0%, $azul 40%, #ffffff 50%, $azul 60%, $azul 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,$azul), color-stop(40%,$azul), color-stop(50%,#ffffff), color-stop(60%,$azul), color-stop(100%,$azul));
+background: -webkit-linear-gradient(-45deg,  $azul 0%,$azul 40%,#ffffff 50%,$azul 60%,$azul 100%);
+background: -o-linear-gradient(-45deg,  $azul 0%,$azul 40%,#ffffff 50%,$azul 60%,$azul 100%);
+background: -ms-linear-gradient(-45deg,  $azul 0%,$azul 40%,#ffffff 50%,$azul 60%,$azul 100%);
+background: linear-gradient(135deg,  $azul 0%,$azul 40%,#ffffff 50%,$azul 60%,$azul 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$azul', endColorstr='$azul',GradientType=1 );
+background-repeat: no-repeat;  
+background-position:0px;
+background-size:300%;  
+}
+
+.light2:hover{
+animation:light 1s;
+-webkit-animation:light 1s;
+
+}
+@keyframes light2 {
+  0% {
+      background-position:-600px; 
+  }
+  100% { 
+      background-position:0px; 
+  }
+  }
+      
+  @-webkit-keyframes light {
+  0% {
+      background-position:-600px; 
+  }
+  100% { 
+      background-position:0px; 
+  }
+  }
+
+
+  .pie{
+    display: flex;
+    flex-direction: column;
+    height: 180px;
+    background-color: $crema;
+    
+    }
+    .search-text{
+      height: 100px;
+      padding-bottom:30px;
+    }
+     
+    .search-text .input-search{
+     height:45px;
+     width:20%;
+     padding-left:20px;
+    color: $azul;
+    } 
+    
+    .search-text .btn-search{
+       background:$naranja;
+       border:none;
+     color:#FFF;
+     height: 45px;
+       width: 80px;
+    }
+    
+    .search-text h4{
+       color:$azul;
+       font-weight: 700;
+    }
+    
+    footer{
+     background-color: $crema;
+      //padding: 60px 0px;
+    }
+    
+    .container1{
+      margin: 5px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+    
+    footer ul{
+       list-style:none;
+       margin:0 auto;
+       display:inline-block;
+       padding-top:50px;
+    }
+    
+    footer ul li{
+       float:left;
+    }
+    
+    footer ul li a{
+     color:#b1aca1;
+       padding:20px;
+    }
+    
+    footer ul li a:hover{
+     color:#7dabdb;
+     text-decoration:none;
+    }
+    
+    .footer-top{
+     padding-bottom:50px;
+    }
+    
+    .footer-top .fa{
+       font-size:18px;
+       color: #FFF;
+       padding-right:10px;
+    }
+    
+    .footer-top a{
+       color:#FFF;
+       background: $azul; 
+       padding: 10px;
+    }
+    
+    .footer-top .col-lg-2:hover .fa , .footer-top .col-lg-2:hover a{
+      color:#7dabdb;
+     text-decoration:none;
+    }
+    
+    .copyright{
+      background-color:#f0f0f0;
+    }
+    
+    .copyright p{
+     font-size:12px;
+     padding:15px 0 10px 0;
+    }
+    
+  
+    
+    .dropdown {
+      display: none;
+      position: relative;
+      //display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
