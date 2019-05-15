@@ -21,7 +21,7 @@ body {
   }
 
 
-.nav{
+  .nav{
     display: block;
     font-size: 20px;
     color: $negro;
@@ -46,7 +46,7 @@ body {
   }
 
     &__item{
-      text-decoration: none;   
+      text-decoration: none !important;   
       margin: 5%;
       color: $negro;
     }
@@ -75,15 +75,16 @@ body {
   transform: scale(1.2); 
 }
 
+
 ////// fin de nav 
 
 .carro--flotante{
   display: flex;
   flex-direction: row;
-background-color: $crema;
+  background-color: $crema;
   position: fixed;
   right: 0px;
-  top: 300px;
+  top: 400px;
   z-index: 100;
 
 }
@@ -115,19 +116,22 @@ align-items: center;
 }
 
 &__texto{
+  font-family: 'Poppins', sans-serif;
   margin-left: 15px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   flex-basis: 30%;
 
   &__img{
-    height: 100px;
-    width: 100px;
+    margin-top: 30px;
+    height: 200px;
+    width: 200px;
   }
 }
 
 &__foto{
-  background: lightgreen;
+  background: whitesmoke;
   width: 500px;
 }
 
@@ -137,6 +141,7 @@ align-items: center;
 .purchase{
   //background-color: #496eb5;
   margin: 5px;
+  margin-top: 15px;
   display: flex;
   flex-basis: 30%;
   align-items: flex-start;
@@ -316,16 +321,27 @@ animation:light 1s;
 }
 }
 
+.recomendacion{
+  display: flex;
+  flex-basis: 60%;
+  flex-direction: row;
+  align-items: center;
+  margin: 30px;
+  font-family: 'Poppins', sans-serif;
 
+  &__texto{
+  display: flex;
+  flex-direction: column;
+  }
 
-
-
+}
 
 
 
 
 
 .pie{
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   height: 180px;

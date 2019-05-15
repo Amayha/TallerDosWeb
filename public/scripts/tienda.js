@@ -26,6 +26,7 @@ function paginaCargada() {
   function recorrerBotones(boton){
       function agregarAlCarrito(){
           var padre = boton.parentNode;
+          padre = padre.parentNode;
           var nombre = padre.querySelector('.lista_nombre').innerText;
           var precio = padre.querySelector('.lista_precio').innerText;
           var imagen = padre.querySelector('.lista_imagen').src;

@@ -83,7 +83,7 @@ $(".submit").click(function () {
 
 	var input = document.querySelector('.input-productos');
 	input.value = localStorage.getItem('listaProductos');
-	
+
 	localStorage.removeItem('listaProductos');
 
 	return true;
@@ -102,10 +102,46 @@ function actualizarCarrito() {
 
 	listaCarrito.innerHTML = '';
 	listaProductos.forEach(function (producto) {
-		listaCarrito.innerHTML += '<li> <img src="' + producto.imagen + '" width="150">' + producto.nombre + '</li>';
+		listaCarrito.innerHTML += '<div class= "carrito__li"><li > <img src="' + producto.imagen + '" width="300">' + '<p class="contenido__nombre">' + producto.nombre + '</p>' + '</li>' + '<span> <img src="https://cdn4.iconfinder.com/data/icons/linecon/512/delete-512.png" alt="" class="carrito__imagen"></span></div>' + '<hr class="linea">';
+		var botones = document.querySelectorAll('.carrito__imagen');
+		botones.forEach(recorrerBotones);
 	});
 
 	console.log('Carrito Num: ' + listaProductos.length)
 }
 
+
 actualizarCarrito();
+
+
+
+function recorrerBotones(boton) {
+	function eliminarDelCarrito() {
+		var padre = boton.parentNode;
+		padre = padre.parentNode;
+		var nombre = padre.querySelector('.contenido__nombre').innerText;
+		console.log('Nombre a Borrar: ' + nombre)
+		var producto = {
+			nombre: nombre
+		};
+		var index = -1;
+		var posicion = listaProductos.find(function (item, i) {
+			if (item.nombre == nombre) {
+				console.log('Encontrado: ' + i);
+				index=i;
+				return i;
+				
+			}
+			console.log('Nombre a Borrar2: ' + item.nombre + ' Indice: ' + i);
+		});
+
+		console.log('Posicion a Borrar: ' + index);
+
+		listaProductos.splice(index, 1);
+
+		localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
+		actualizarCarrito();
+	}
+	boton.addEventListener('click', eliminarDelCarrito);
+	console.log('Carrito Num 3: ' + listaProductos.length)
+}

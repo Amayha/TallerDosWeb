@@ -32,11 +32,20 @@ body {
 .contenido{
 	display: flex;
 	flex-direction: row;
+	
 
 	&--carrito{
+
+		ul{
+			list-style-type: none;
+		}
+	}
+
+	&--carrito{
+		background-color: whitesmoke;
 		display: flex;
 		flex-direction: column;
-		background-color: green;
+		
 		flex-basis: 50%;
 		//justify-content: center;
 		margin-left: 30px; 
@@ -45,10 +54,34 @@ body {
 	&--forma{
 		justify-content: center;
 		flex-basis: 50%;
+		
 	}
 }
 
+.contenido__nombre{
+	margin: 10px;
+	font-size: 20px;
+}
+.contenido__titulo{
+	margin: 10px;
+	font-size: 30px;
+}
+.carrito__imagen{
+	height: 50px;
+	display: flex;
+	margin: 10px;
+	right: 0px;
+	bottom: 0px;
+}
 
+.carrito__li{
+	display: flex;
+	flex-direction: row;
+}
+
+.linea{
+    border: 1px solid $naranja;
+  }
 
 
 /*form styles*/
